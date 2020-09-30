@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+</head>
+
+<body>
+    <h1>Predict Hotel Booking Cancelation</h1>
+    <hr>
+
+    <form method="POST" action="http://127.0.0.1:5000/klasifikasi">
+        <br>
+        <br>
+
+        <label for="arrival_date_month">Arrival Month :</label>					
+        <select name="arrival_date_month" id="arrival_date_month">
+            {% for drop in list_arrival_date_month %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+
+        <label for="meal">Arrival Meal :</label>					
+        <select name="meal" id="meal">
+            {% for drop in list_meal %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <br>
+
+        <label for="market_segment">Market Segment:</label>					
+        <select name="market_segment" id="market_segment">
+            {% for drop in list_market_segment %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>        
+        <br>
+        <br>
+
+        <label for="distribution_channel">Distribution Channel:</label>					
+        <select name="distribution_channel" id="distribution_channel">
+            {% for drop in list_distribution_channel %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>    
+        <br>
+        <br>
+
+        <label for="assigned_room_type">Assigned Room Type:</label>					
+        <select name="assigned_room_type" id="assigned_room_type">
+            {% for drop in list_assigned_room_type %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>    
+        <br>
+        <br>
+
+        <label for="deposit_type">Deposit Type:</label>					
+        <select name="deposit_type" id="deposit_type">
+            {% for drop in list_deposit_type %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>    
+        <br>
+        <br>
+
+        <label for="customer_type">Market Segment:</label>					
+        <select name="customer_type" id="customer_type">
+            {% for drop in list_customer_type %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>   
+        <br>
+
+        <label for="reserved_room_type">Reserved Room Type:</label>					
+        <select name="reserved_room_type" id="reserved_room_type">
+            {% for drop in list_reserved_room_type %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>  
+        
+        <br>
+
+        <label for="agent">Market Agent:</label>					
+        <select name="agent" id="agent">
+            {% for drop in list_agent %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>  
+
+        <br>
+
+        <label for="company">Market Company:</label>					
+        <select name="company" id="company">
+            {% for drop in list_company %}  
+                <option value="{{drop}}">{{drop}}</option>
+            {% endfor %}
+        </select>          
+
+        <br>
+        <br>Lead Time : <input type="number" name="lead_time" />
+        <br>
+        <br>Arrival Date Week Number : <input type="number" name="arrival_date_week_number" />
+        <br>
+        <br>Stays in Week Nights : <input type="number" name="stays_in_week_nights" />
+        <br>
+        <br>Adults : <input type="number" name="adults" />
+        <br>
+        <br>Babies : <input type="number" name="babies" />
+        <br>
+        <br>Is Repeated Guest : <input type="number" name="is_repeated_guest" />
+        <br>
+        <br>Previous Cancellation : <input type="number" name="previous_cancellations" />
+        <br>
+        <br>Previous Bookings not Canceled : <input type="number" name="previous_bookings_not_canceled" />
+        <br>
+        <br>Booking Changes : <input type="number" name="booking_changes" />
+        <br>
+        <br>Days In Waiting List : <input type="number" name="days_in_waiting_list" />
+        <br>
+        <br>ADR : <input type="number" name="adr" />
+        <br>
+        <br>Required Car Parking Spaces : <input type="number" name="required_car_parking_spaces" />
+        <br>
+        <br>Total of Special Requests : <input type="number" name="total_of_special_requests" />
+        <br>
+        <br>
+        <br>Price : <input type="number" name="price" />
+        <br>
+        <input type="submit" value="Classify" />
+    </form>
+</body>
+
+</html>
